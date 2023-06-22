@@ -62,6 +62,6 @@ if (val1 == "X") {
   alert("It is one");
 }
 
-const change1 = () => {
-  alert("Change ho gya bhai!");
-};
+function change1() {
+  alert("Change is visible!");
+}
