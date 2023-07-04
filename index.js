@@ -1,3 +1,5 @@
+var counter = 0;
+
 let ele1 = document.getElementById("block1");
 let ele2 = document.getElementById("block2");
 let ele3 = document.getElementById("block3");
@@ -10,30 +12,42 @@ let ele9 = document.getElementById("block9");
 
 function mark1() {
   ele1.value = "X";
+  val1 = "X";
+  alert("It is one");
+  counter++;
 }
 function mark2() {
   ele2.value = "X";
+  counter++;
 }
 function mark3() {
   ele3.value = "X";
+  counter++;
+  console.log(counter);
 }
 function mark4() {
   ele4.value = "X";
+  counter++;
 }
 function mark5() {
   ele5.value = "X";
+  counter++;
 }
 function mark6() {
   ele6.value = "X";
+  counter++;
 }
 function mark7() {
   ele7.value = "X";
+  counter++;
 }
 function mark8() {
   ele8.value = "X";
+  counter++;
 }
 function mark9() {
   ele9.value = "X";
+  counter++;
 }
 
 const reset = () => {
@@ -46,6 +60,7 @@ const reset = () => {
   ele7.value = "";
   ele8.value = "";
   ele9.value = "";
+  counter = 0;
 };
 
 var val1 = ele1.value;
@@ -59,9 +74,13 @@ var val8 = ele8.value;
 var val9 = ele9.value;
 
 if (val1 == "X") {
-  alert("It is one");
 }
 
 function change1() {
   alert("Change is visible!");
+  change();
+}
+
+function change(){
+  
 }
