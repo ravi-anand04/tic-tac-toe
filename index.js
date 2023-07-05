@@ -1,4 +1,5 @@
 var counter = 0;
+var turn = "X";
 
 let ele1 = document.getElementById("block1");
 let ele2 = document.getElementById("block2");
@@ -10,59 +11,6 @@ let ele7 = document.getElementById("block7");
 let ele8 = document.getElementById("block8");
 let ele9 = document.getElementById("block9");
 
-function mark1() {
-  ele1.value = "X";
-  val1 = "X";
-  alert("It is one");
-  counter++;
-}
-function mark2() {
-  ele2.value = "X";
-  counter++;
-}
-function mark3() {
-  ele3.value = "X";
-  counter++;
-  console.log(counter);
-}
-function mark4() {
-  ele4.value = "X";
-  counter++;
-}
-function mark5() {
-  ele5.value = "X";
-  counter++;
-}
-function mark6() {
-  ele6.value = "X";
-  counter++;
-}
-function mark7() {
-  ele7.value = "X";
-  counter++;
-}
-function mark8() {
-  ele8.value = "X";
-  counter++;
-}
-function mark9() {
-  ele9.value = "X";
-  counter++;
-}
-
-const reset = () => {
-  ele1.value = "";
-  ele2.value = "";
-  ele3.value = "";
-  ele4.value = "";
-  ele5.value = "";
-  ele6.value = "";
-  ele7.value = "";
-  ele8.value = "";
-  ele9.value = "";
-  counter = 0;
-};
-
 var val1 = ele1.value;
 var val2 = ele2.value;
 var val3 = ele3.value;
@@ -73,14 +21,103 @@ var val7 = ele7.value;
 var val8 = ele8.value;
 var val9 = ele9.value;
 
-if (val1 == "X") {
+function mark1() {
+  val1 = ele1.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
+  change();
 }
-
-function change1() {
-  alert("Change is visible!");
+function mark2() {
+  val2 = ele2.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
+  change();
+}
+function mark3() {
+  val3 = ele3.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
+  change();
+}
+function mark4() {
+  val4 = ele4.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
+  change();
+}
+function mark5() {
+  val5 = ele5.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
+  change();
+}
+function mark6() {
+  val6 = ele6.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
+  change();
+}
+function mark7() {
+  val7 = ele7.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
+  change();
+}
+function mark8() {
+  val8 = ele8.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
+  change();
+}
+function mark9() {
+  val9 = ele9.value = turn;
+  turn = turn == "X" ? "O" : "X";
+  counter++;
   change();
 }
 
-function change(){
-  
+const reset = () => {
+  val1 = ele1.value = "";
+  val2 = ele2.value = "";
+  val3 = ele3.value = "";
+  val4 = ele4.value = "";
+  val5 = ele5.value = "";
+  val6 = ele6.value = "";
+  val7 = ele7.value = "";
+  val8 = ele8.value = "";
+  val9 = ele9.value = "";
+  counter = 0;
+  turn = "X";
+};
+
+function change() {
+  const isTrue =
+    (val1 === "X" && val2 === "X" && val3 === "X") ||
+    (val3 === "X" && val6 === "X" && val9 === "X") ||
+    (val1 === "X" && val4 === "X" && val7 === "X") ||
+    (val7 === "X" && val8 === "X" && val9 === "X") ||
+    (val1 === "X" && val5 === "X" && val9 === "X") ||
+    (val3 === "X" && val5 === "X" && val7 === "X") ||
+    (val2 === "X" && val5 === "X" && val8 === "X") ||
+    (val4 === "X" && val5 === "X" && val6 === "X") ||
+    (val1 === "O" && val2 === "O" && val3 === "O") ||
+    (val3 === "O" && val6 === "O" && val9 === "O") ||
+    (val1 === "O" && val4 === "O" && val7 === "O") ||
+    (val7 === "O" && val8 === "O" && val9 === "O") ||
+    (val1 === "O" && val5 === "O" && val9 === "O") ||
+    (val3 === "O" && val5 === "O" && val7 === "O") ||
+    (val2 === "O" && val5 === "O" && val8 === "O") ||
+    (val4 === "O" && val5 === "O" && val6 === "O");
+
+  if (isTrue) {
+    if (counter % 2 == 1) {
+      alert("Player 1 won");
+      reset();
+    } else {
+      alert("Player 2 won");
+      reset();
+    }
+  }
+
+  console.log(val1, val2, val3, val4, val5, val6, val7, val8, val9);
 }
