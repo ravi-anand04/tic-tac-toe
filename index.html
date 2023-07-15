@@ -4,75 +4,26 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./index.css" />
-    <title>Document</title>
+    <title>Unreal</title>
+    <script defer src="./index.js"></script>
   </head>
   <body>
-    <main>
-      <input
-        type="button"
-        id="block1"
-        onclick="mark1()"
-        onchange="change1()"
-        value="1"
-      />
-      <input
-        type="button"
-        id="block2"
-        onclick="mark2()"
-        onchange="change2()"
-        value="2"
-      />
-      <input
-        type="button"
-        id="block3"
-        onclick="mark3()"
-        onchange="change3()"
-        value="3"
-      />
-      <input
-        type="button"
-        id="block4"
-        onclick="mark4()"
-        onchange="change4()"
-        value="4"
-      />
-      <input
-        type="button"
-        id="block5"
-        onclick="mark5()"
-        onchange="change5()"
-        value="5"
-      />
-      <input
-        type="button"
-        id="block6"
-        onclick="mark6()"
-        onchange="change6()"
-        value="6"
-      />
-      <input
-        type="button"
-        id="block7"
-        onclick="mark7()"
-        onchange="change7()"
-        value="7"
-      />
-      <input
-        type="button"
-        id="block8"
-        onclick="mark8()"
-        onchange="change8()"
-        value="8"
-      />
-      <input
-        type="button"
-        id="block9"
-        onclick="mark9()"
-        onchange="change9()"
-        value="9"
-      />
-    </main>
-    <button id="reset" onclick="reset()">RESET</button>
-    <script src="./index.js"></script>
+    <h1>
+      <span style="color: rgb(255, 0, 0)">Tic </span
+      ><span style="color: rgb(255, 189, 75)">Tac </span
+      ><span style="color: rgb(255, 225, 0)">Toe </span>
+    </h1>
+    <div class="grid">
+      <div class="block" data-index="0"></div>
+      <div class="block" data-index="1"></div>
+      <div class="block" data-index="2"></div>
+      <div class="block" data-index="3"></div>
+      <div class="block" data-index="4"></div>
+      <div class="block" data-index="5"></div>
+      <div class="block" data-index="6"></div>
+      <div class="block" data-index="7"></div>
+      <div class="block" data-index="8"></div>
+    </div>
+    <button class="reset">Reset</button>
   </body>
 </html>

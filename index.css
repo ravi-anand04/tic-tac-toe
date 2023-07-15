@@ -1,43 +1,48 @@
 * {
   margin: 0;
   box-sizing: border-box;
-  font-family: "Trebuchet MS";
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 body {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
-main {
+.grid {
   display: grid;
   padding: 4rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  height: 90vh;
+  height: 80vh;
   width: 600px;
+  column-gap: 5px;
+  row-gap: 5px;
 }
 
-main > input {
-  border: 3px solid rgb(255, 0, 0);
-  padding: 10px;
-  /* grid-column-start:2;
-  grid-column-end: 4; */
-  /* grid-column-start: span 3;
-  grid-column-end: 6; */
-  text-align: center;
+.block {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.362);
+  border-radius: 10px;
+  background-color: rgb(171, 87, 255);
 }
 
-#reset {
-  border-radius: 5px;
-  padding: 10px;
-  width: 100px;
-  background-color: rgb(66, 66, 66);
-  color: whitesmoke;
+.reset {
+  border-radius: 10px;
+  background-color: rgb(163, 0, 0);
+  width: 150px;
+  padding: 10px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  border: none;
 }
 
-#reset:hover {
-  transform: scale(1.04);
+.reset:hover {
+  background-color: rgb(252, 0, 0);
+  color: black;
 }
