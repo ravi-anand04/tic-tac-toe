@@ -27,19 +27,20 @@ const reset = () => {
     // Array.from() is also there
     block.innerText = "";
   });
-  console.log(turn);
+  counter = 0;
+  // console.log(turn);
 };
 
 function change() {
   if (isWinner("X")) {
-    alert("Spiderman has won the fight!!!");
-    reset();
+    // reset();
+    alert("Player X wins");
   } else if (isWinner("O")) {
-    alert("Venom has won the fight!!!");
-    reset();
+    // reset();
+    alert("Player O wins");
   } else if (counter === 9) {
-    alert("Waste of time!");
-    reset();
+    // reset();
+    alert("It's a draw!");
   }
 }
 
